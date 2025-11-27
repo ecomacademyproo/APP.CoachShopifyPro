@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Offre Boutique Clé en Main – Coach Shopify Pro™</title>
+
+<style>
+    body{
+        margin:0;
+        font-family:'Poppins', sans-serif;
+        background:#020617;
+        color:white;
+        overflow-x:hidden;
+    }
+
+    .container{
+        width:92%;
+        max-width:900px;
+        margin:auto;
+        padding-top:25px;
+        animation:fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn{
+        from{opacity:0; transform:translateY(20px);}
+        to{opacity:1; transform:translateY(0);}
+    }
+
+    /* TITLE COUNTDOWN */
+    .count-title{
+        color:#36E0FF;
+        font-size:24px;
+        text-align:center;
+        margin-bottom:10px;
+        font-weight:700;
+    }
+
+    /* COUNTDOWN WRAPPER */
+    .count-wrapper{
+        background:rgba(0,40,80,0.35);
+        padding:20px;
+        border-radius:15px;
+        border:1px solid rgba(0,150,255,0.4);
+        box-shadow:0 0 20px rgba(0,150,255,0.3);
+        text-align:center;
+        animation:fadeIn 1.4s ease;
+    }
+
+    #countdown{
+        display:flex;
+        justify-content:center;
+        gap:12px;
+        margin-top:10px;
+    }
+
+    .box{
+        background:rgba(0,60,120,0.25);
+        padding:15px;
+        width:70px;
+        border-radius:12px;
+        border:1px solid rgba(0,160,255,0.4);
+        box-shadow:0 0 15px rgba(0,160,255,0.25);
+        backdrop-filter:blur(6px);
+        animation:glow 2.5s infinite alternate;
+    }
+
+    .box span{
+        font-size:28px;
+        font-weight:800;
+        color:#36E0FF;
+    }
+    .label{ font-size:12px; opacity:0.7; }
+
+    @keyframes glow{
+        from{box-shadow:0 0 10px rgba(0,160,255,0.2);}
+        to{box-shadow:0 0 20px rgba(0,160,255,0.5);}
+    }
+
+    /* HERO IMAGE */
+    .hero img{
+        width:100%;
+        border-radius:20px;
+        margin-top:25px;
+        box-shadow:0 0 40px rgba(0,150,255,0.4);
+        animation:pop 1s ease;
+    }
+
+    @keyframes pop{
+        from{transform:scale(0.95); opacity:0;}
+        to{transform:scale(1); opacity:1;}
+    }
+
+    /* BUTTON GOLD */
+    .btn{
+        display:block;
+        width:100%;
+        max-width:380px;
+        margin:25px auto 10px;
+        padding:15px 10px;
+        text-align:center;
+        background:linear-gradient(90deg,#f8dd6c,#e2b63e);
+        color:#000;
+        font-weight:700;
+        font-size:18px;
+        border-radius:50px;
+        text-decoration:none;
+        box-shadow:0 0 20px rgba(255,200,80,0.45);
+        transition:0.2s ease;
+        animation:fadeIn 1.5s ease;
+    }
+    .btn:hover{ transform:scale(1.05); }
+
+    /* WHATSAPP BUBBLE */
+    .wa-bubble{
+        display:flex;
+        align-items:center;
+        gap:8px;
+        width:160px;
+        margin:5px auto 30px;
+        padding:12px;
+        background:#25D366;
+        color:#000;
+        border-radius:40px;
+        font-weight:700;
+        font-size:16px;
+        text-decoration:none;
+        box-shadow:0 0 18px rgba(37,211,102,0.4);
+    }
+
+    .wa-bubble img{
+        width:24px;
+        height:24px;
+    }
+
+    /* FAQ */
+    .faq-title{
+        font-size:25px;
+        text-align:center;
+        margin-top:10px;
+        margin-bottom:15px;
+        color:#36E0FF;
+    }
+
+    .faq-item{
+        background:rgba(0,40,80,0.3);
+        padding:18px;
+        margin:12px 0;
+        border-radius:12px;
+        border:1px solid rgba(0,140,255,0.3);
+        cursor:pointer;
+        box-shadow:0 0 18px rgba(0,140,255,0.2);
+    }
+
+    .faq-item p{
+        display:none;
+        opacity:0.85;
+        margin-top:10px;
+    }
+
+    /* GOLD MINDSET PLATE (TABLEAU DE MISE EN CONFIANCE) */
+    .gold-board{
+        margin:38px 0 30px;
+        padding:25px;
+        background:linear-gradient(135deg,#f7d77c,#e4b74d,#f2d48a);
+        color:#3a2b05;
+        border-radius:18px;
+        box-shadow:
+            0 0 25px rgba(255,213,120,0.5),
+            inset 0 0 18px rgba(255,240,190,0.6),
+            0 0 60px rgba(255,200,90,0.35);
+        border:2px solid rgba(255,230,150,0.9);
+        text-align:center;
+        font-size:18px;
+        line-height:1.7;
+        animation:fadeIn 1.6s ease;
+    }
+
+    .gold-board h3{
+        margin-top:0;
+        color:#3a2b05;
+        font-size:22px;
+        font-weight:700;
+        letter-spacing:0.5px;
+        text-shadow:
+            0 0 5px rgba(255,255,255,0.4),
+            0 1px 0 rgba(150,110,40,0.8);
+    }
+
+    footer{
+        text-align:center;
+        opacity:0.6;
+        margin:10px 0 35px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- TITRE EN MAJUSCULES -->
+    <h2 class="count-title">⏳ OFFRE VALABLE ENCORE :</h2>
+
+    <!-- COMPTEUR -->
+    <div class="count-wrapper">
+        <div id="countdown">
+            <div class="box"><span id="days">00</span><div class="label">JOURS</div></div>
+            <div class="box"><span id="hours">00</span><div class="label">HEURES</div></div>
+            <div class="box"><span id="minutes">00</span><div class="label">MINUTES</div></div>
+            <div class="box"><span id="seconds">00</span><div class="label">SECONDES</div></div>
+        </div>
+    </div>
+
+    <!-- AFFICHE 3D -->
+    <div class="hero">
+        <img src="https://i.ibb.co/BVZWpzTZ/948-CA3-D2-C20-C-4-E60-8-B00-B4356-EA95207.png">
+    </div>
+
+    <!-- BOUTON COMMANDER JUSTE SOUS L'AFFICHE -->
+    <a href="https://snkkpvsp.mychariow.shop/prd_xpxb5d/checkout" class="btn">
+        COMMANDER MA BOUTIQUE MAINTENANT
+    </a>
+
+    <!-- BULLE WHATSAPP -->
+    <a href="https://wa.me/message/RGYKG6GSQFCDG1" class="wa-bubble">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+        WhatsApp
+    </a>
+
+    <!-- FAQ SPÉCIALE BOUTIQUE -->
+    <h2 class="faq-title">❓ FAQ – À propos de ta boutique</h2>
+
+    <div class="faq-item">
+        <h3>Comment vais-je recevoir ma boutique Shopify ?</h3>
+        <p>Je crée ta boutique pour toi, puis tu reçois un accès complet (identifiants + tutoriel vidéo) afin que tu puisses la gérer facilement.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Est-ce que la boutique sera déjà prête à vendre ?</h3>
+        <p>Oui. La boutique est livrée avec un design pro, des produits tendance déjà ajoutés et toutes les pages essentielles configurées.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Est-ce que j’ai besoin d’une carte bancaire ou d’un ordinateur ?</h3>
+        <p>Non. Je t’aide pour le paiement de ton premier forfait et tu peux tout gérer depuis ton téléphone.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>En combien de temps ma boutique est prête ?</h3>
+        <p>En général, ta boutique est prête entre 24h et 72h selon la file d’attente et les informations que tu fournis.</p>
+    </div>
+
+    <!-- TABLEAU DE MISE EN CONFIANCE (PLAQUE GRAVÉE) -->
+    <div class="gold-board">
+        <h3>🌟 Le Choix Qui Change une Vie</h3>
+
+        <p>La plupart des gens remettent leurs projets au lendemain…  
+        Et c’est exactement pour ça qu’ils n’avancent jamais.</p>
+
+        <p>Aujourd’hui, tu as une opportunité simple et directe :  
+        <strong>un système digital prêt à vendre + un accompagnement personnalisé.</strong></p>
+
+        <p>Ceux qui réussissent ne sont pas les plus intelligents.  
+        Ce sont ceux qui <strong>agissent pendant que les autres hésitent.</strong></p>
+
+        <p>Si tu ressens que c’est ton moment…  
+        Alors <strong>ne laisse pas la chance passer une deuxième fois.</strong></p>
+    </div>
+
+</div>
+
+<footer>Coach Shopify Pro™</footer>
+
+<script>
+/* COUNTDOWN SCRIPT – 15 JOURS */
+let countDownDate = new Date();
+countDownDate.setDate(countDownDate.getDate() + 15);
+
+setInterval(()=>{
+    let now = new Date().getTime();
+    let distance = countDownDate - now;
+
+    document.getElementById("days").innerHTML     = Math.floor(distance / (1000*60*60*24));
+    document.getElementById("hours").innerHTML    = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+    document.getElementById("minutes").innerHTML  = Math.floor((distance%(1000*60*60))/(1000*60));
+    document.getElementById("seconds").innerHTML  = Math.floor((distance%(1000*60))/1000);
+
+},1000);
+
+/* FAQ OPEN/CLOSE */
+document.querySelectorAll('.faq-item').forEach(faq=>{
+    faq.addEventListener('click', ()=>{
+        let p = faq.querySelector("p");
+        p.style.display = p.style.display === "block" ? "none" : "block";
+    });
+});
+</script>
+
+</body>
+</html>
