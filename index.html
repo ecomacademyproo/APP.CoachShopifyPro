@@ -12,6 +12,19 @@
         background:#020617;
         color:white;
         overflow-x:hidden;
+        animation:globalPulse 6s infinite alternate ease-in-out;
+    }
+
+    /* NÉON GLOBAL (effet d'ambiance) */
+    @keyframes globalPulse{
+        from{
+            box-shadow: inset 0 0 50px rgba(0,180,255,0.1);
+            background:#020617;
+        }
+        to{
+            box-shadow: inset 0 0 120px rgba(0,180,255,0.25);
+            background:#031021;
+        }
     }
 
     .container{
@@ -20,6 +33,11 @@
         margin:auto;
         padding-top:25px;
         animation:fadeIn 1.2s ease;
+        border-radius:20px;
+        box-shadow:
+            0 0 30px rgba(0,160,255,0.25),
+            inset 0 0 45px rgba(0,160,255,0.18);
+        padding-bottom:40px;
     }
 
     @keyframes fadeIn{
@@ -27,22 +45,27 @@
         to{opacity:1; transform:translateY(0);}
     }
 
-    /* TITLE COUNTDOWN */
+    /* TITRE AVEC EFFET NÉON */
     .count-title{
-        color:#36E0FF;
-        font-size:24px;
+        color:#4FE9FF;
+        font-size:26px;
         text-align:center;
         margin-bottom:10px;
-        font-weight:700;
+        font-weight:800;
+        text-shadow:
+            0 0 10px rgba(0,200,255,0.9),
+            0 0 25px rgba(0,200,255,0.6);
     }
 
-    /* COUNTDOWN WRAPPER */
+    /* COMPTEUR SECTION */
     .count-wrapper{
         background:rgba(0,40,80,0.35);
         padding:20px;
         border-radius:15px;
-        border:1px solid rgba(0,150,255,0.4);
-        box-shadow:0 0 20px rgba(0,150,255,0.3);
+        border:1px solid rgba(0,180,255,0.6);
+        box-shadow:
+            0 0 30px rgba(0,180,255,0.4),
+            inset 0 0 20px rgba(0,180,255,0.4);
         text-align:center;
         animation:fadeIn 1.4s ease;
     }
@@ -54,7 +77,7 @@
         margin-top:10px;
     }
 
-    /* NEON BOX EFFECT */
+    /* BOX NÉON COMPTEUR */
     .box{
         background:rgba(0,60,120,0.25);
         padding:15px;
@@ -62,32 +85,33 @@
         border-radius:12px;
         border:1px solid rgba(0,200,255,0.8);
         box-shadow:
-            0 0 12px rgba(0,180,255,0.6),
-            0 0 25px rgba(0,150,255,0.4),
-            inset 0 0 12px rgba(0,180,255,0.4);
-        backdrop-filter:blur(6px);
+            0 0 14px rgba(0,180,255,0.7),
+            0 0 35px rgba(0,150,255,0.45),
+            inset 0 0 14px rgba(0,180,255,0.4);
+        backdrop-filter:blur(7px);
         animation:neonPulse 2s infinite alternate;
     }
 
     @keyframes neonPulse{
         from{
             box-shadow:
-                0 0 10px rgba(0,200,255,0.4),
-                0 0 20px rgba(0,150,255,0.2),
-                inset 0 0 8px rgba(0,200,255,0.2);
+                0 0 15px rgba(0,200,255,0.5),
+                0 0 30px rgba(0,160,255,0.3),
+                inset 0 0 10px rgba(0,200,255,0.3);
         }
         to{
             box-shadow:
-                0 0 25px rgba(0,240,255,0.8),
-                0 0 45px rgba(0,200,255,0.6),
-                inset 0 0 14px rgba(0,240,255,0.5);
+                0 0 35px rgba(0,240,255,0.9),
+                0 0 55px rgba(0,200,255,0.6),
+                inset 0 0 18px rgba(0,240,255,0.5);
         }
     }
 
     .box span{
         font-size:28px;
         font-weight:800;
-        color:#36E0FF;
+        color:#4FE9FF;
+        text-shadow:0 0 12px rgba(0,240,255,0.9);
     }
     .label{ font-size:12px; opacity:0.7; }
 
@@ -96,7 +120,9 @@
         width:100%;
         border-radius:20px;
         margin-top:25px;
-        box-shadow:0 0 40px rgba(0,150,255,0.4);
+        box-shadow:
+            0 0 50px rgba(0,150,255,0.5),
+            inset 0 0 40px rgba(0,150,255,0.4);
         animation:pop 1s ease;
     }
 
@@ -105,7 +131,7 @@
         to{transform:scale(1); opacity:1;}
     }
 
-    /* BUTTON GOLD */
+    /* BOUTON GOLD */
     .btn{
         display:block;
         width:100%;
@@ -113,19 +139,20 @@
         margin:25px auto 10px;
         padding:15px 10px;
         text-align:center;
-        background:linear-gradient(90deg,#f8dd6c,#e2b63e);
+        background:linear-gradient(90deg,#f9e88f,#ecc552);
         color:#000;
         font-weight:700;
         font-size:18px;
         border-radius:50px;
         text-decoration:none;
-        box-shadow:0 0 20px rgba(255,200,80,0.45);
+        box-shadow:
+            0 0 25px rgba(255,210,80,0.45),
+            inset 0 0 15px rgba(255,250,210,0.6);
         transition:0.2s ease;
-        animation:fadeIn 1.5s ease;
     }
     .btn:hover{ transform:scale(1.05); }
 
-    /* WHATSAPP BUBBLE */
+    /* WHATSAPP */
     .wa-bubble{
         display:flex;
         align-items:center;
@@ -139,13 +166,12 @@
         font-weight:700;
         font-size:16px;
         text-decoration:none;
-        box-shadow:0 0 18px rgba(37,211,102,0.4);
+        box-shadow:
+            0 0 20px rgba(37,211,102,0.5),
+            inset 0 0 10px rgba(255,255,255,0.4);
     }
 
-    .wa-bubble img{
-        width:24px;
-        height:24px;
-    }
+    .wa-bubble img{ width:24px; height:24px; }
 
     /* FAQ */
     .faq-title{
@@ -153,7 +179,10 @@
         text-align:center;
         margin-top:10px;
         margin-bottom:15px;
-        color:#36E0FF;
+        color:#4FE9FF;
+        text-shadow:
+            0 0 10px rgba(0,200,255,0.8),
+            0 0 20px rgba(0,200,255,0.5);
     }
 
     .faq-item{
@@ -161,9 +190,11 @@
         padding:18px;
         margin:12px 0;
         border-radius:12px;
-        border:1px solid rgba(0,140,255,0.3);
+        border:1px solid rgba(0,140,255,0.5);
         cursor:pointer;
-        box-shadow:0 0 18px rgba(0,140,255,0.2);
+        box-shadow:
+            0 0 22px rgba(0,140,255,0.3),
+            inset 0 0 12px rgba(0,140,255,0.2);
     }
 
     .faq-item p{
@@ -180,10 +211,9 @@
         color:#3a2b05;
         border-radius:18px;
         box-shadow:
-            0 0 25px rgba(255,213,120,0.5),
-            inset 0 0 18px rgba(255,240,190,0.6),
-            0 0 60px rgba(255,200,90,0.35);
-        border:2px solid rgba(255,230,150,0.9);
+            0 0 35px rgba(255,213,120,0.6),
+            inset 0 0 18px rgba(255,240,190,0.7);
+        border:2px solid rgba(255,230,150,1);
         text-align:center;
         font-size:18px;
         line-height:1.7;
@@ -196,7 +226,9 @@
         font-size:22px;
         font-weight:700;
         letter-spacing:0.5px;
-        text-shadow:0 0 5px rgba(255,255,255,0.4);
+        text-shadow:
+            0 0 5px rgba(255,255,255,0.4),
+            0 1px 0 rgba(150,110,40,0.8);
     }
 
     footer{
@@ -212,10 +244,8 @@
 
 <div class="container">
 
-    <!-- TITRE -->
     <h2 class="count-title">⏳ OFFRE VALABLE ENCORE :</h2>
 
-    <!-- COMPTEUR -->
     <div class="count-wrapper">
         <div id="countdown">
             <div class="box"><span id="days">00</span><div class="label">JOURS</div></div>
@@ -225,23 +255,19 @@
         </div>
     </div>
 
-    <!-- AFFICHE -->
     <div class="hero">
         <img src="https://i.ibb.co/BVZWpzTZ/948-CA3-D2-C20-C-4-E60-8-B00-B4356-EA95207.png">
     </div>
 
-    <!-- COMMAND BUTTON -->
     <a href="https://snkkpvsp.mychariow.shop/prd_xpxb5d/checkout" class="btn">
         COMMANDER MA BOUTIQUE MAINTENANT
     </a>
 
-    <!-- WHATSAPP -->
     <a href="https://wa.me/message/RGYKG6GSQFCDG1" class="wa-bubble">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
         WhatsApp
     </a>
 
-    <!-- FAQ -->
     <h2 class="faq-title">❓ FAQ – À propos de ta boutique</h2>
 
     <div class="faq-item">
@@ -251,20 +277,19 @@
 
     <div class="faq-item">
         <h3>Est-ce que la boutique sera prête à vendre ?</h3>
-        <p>Oui, elle est livrée entièrement configurée et optimisée.</p>
+        <p>Oui, tout sera déjà configuré et optimisé.</p>
     </div>
 
     <div class="faq-item">
         <h3>Est-ce que j’ai besoin d’un PC ?</h3>
-        <p>Non, tu peux tout gérer depuis ton téléphone.</p>
+        <p>Non, ton téléphone suffit largement.</p>
     </div>
 
     <div class="faq-item">
         <h3>En combien de temps est-elle prête ?</h3>
-        <p>Entre 24h et 72h selon la file d’attente.</p>
+        <p>24h à 72h selon la file d’attente.</p>
     </div>
 
-    <!-- GOLD PLATE -->
     <div class="gold-board">
         <h3>🌟 Le Choix Qui Change une Vie</h3>
         <p>La plupart des gens remettent leurs projets au lendemain…  
@@ -285,7 +310,7 @@
 <footer>Coach Shopify Pro™</footer>
 
 <script>
-/* COUNTDOWN SCRIPT – 7 JOURS */
+/* COUNTDOWN 7 JOURS */
 let countDownDate = new Date();
 countDownDate.setDate(countDownDate.getDate() + 7);
 
@@ -300,7 +325,7 @@ setInterval(()=>{
 
 },1000);
 
-/* FAQ OPEN */
+/* FAQ TOGGLE */
 document.querySelectorAll('.faq-item').forEach(faq=>{
     faq.addEventListener('click', ()=>{
         let p = faq.querySelector("p");
